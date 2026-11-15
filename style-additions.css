@@ -383,3 +383,415 @@ body.paused .portrait-sticker {
 .about-right {
     max-width: 100%;
 }
+
+
+/* ==========================================
+   MOBILE RESPONSIVE FIX - AISHWARYA PORTFOLIO
+   ========================================== */
+
+/* Prevent horizontal overflow */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+
+    .about.section {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .about-left {
+        grid-column: 1;
+    }
+
+    .about-right {
+        grid-column: 1;
+    }
+
+    .about-portrait {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        max-width: 100%;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .skills-section {
+        grid-template-columns: 1fr !important;
+        gap: 35px !important;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+
+    /* HEADER */
+    header {
+        height: 68px;
+        padding: 0 5%;
+        gap: 8px;
+    }
+
+    .wordmark {
+        font-size: 30px;
+        flex-shrink: 0;
+    }
+
+    nav {
+        gap: 10px;
+        font-size: 10px;
+    }
+
+    nav > a:nth-child(2) {
+        display: none;
+    }
+
+    #motion {
+        font-size: 8px;
+        white-space: nowrap;
+    }
+
+    /* HERO */
+    .hero {
+        padding: 25px 6% 40px;
+        overflow: hidden;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 11vw, 65px);
+        line-height: 1.08;
+        letter-spacing: -2.5px;
+        margin: 205px 0 25px;
+        top: 0;
+    }
+
+    .last-line {
+        white-space: normal;
+    }
+
+    h1 em {
+        letter-spacing: -2px;
+    }
+
+    .character-wrap {
+        width: 145px;
+        height: 160px;
+        top: 65px;
+        right: calc(50% - 72px);
+    }
+
+    .orbit-label {
+        font-size: 7px;
+    }
+
+    .character-note {
+        font-size: 8px;
+    }
+
+    .hero-bottom {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .hero-actions {
+        top: 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .hero-actions .pill {
+        padding: 13px 15px;
+        font-size: 10px;
+        gap: 15px;
+    }
+
+    .scroll-note {
+        display: none;
+    }
+
+    /* GENERAL SECTIONS */
+    .section {
+        padding: 55px 6%;
+    }
+
+    /* ABOUT */
+    .about.section {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        padding: 55px 6% !important;
+    }
+
+    .about-left,
+    .about-right,
+    .about-portrait {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .about-left h2 {
+        font-size: clamp(36px, 10vw, 48px);
+        line-height: 1.12;
+    }
+
+    .about-right p.intro {
+        font-size: 21px;
+    }
+
+    .about-right p {
+        font-size: 14px;
+    }
+
+    .about-portrait {
+        max-width: 330px;
+        margin: 0 auto;
+    }
+
+    .portrait-sticker {
+        left: -8px;
+        font-size: 12px;
+    }
+
+    .portrait-star {
+        left: -12px;
+    }
+
+    .portrait-index {
+        font-size: 8px;
+    }
+
+    .education {
+        padding-top: 22px;
+    }
+
+    /* PROJECTS */
+    .work {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .project-art {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .project-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 35px;
+    }
+
+    .project-grid > .project:last-child {
+        grid-column: auto;
+    }
+
+    .project-info {
+        flex-wrap: wrap;
+    }
+
+    .project-info > div {
+        min-width: 0;
+    }
+
+    /* AMAZON PROJECT */
+    .project-grid > .project:last-child .project-art.amazon {
+        min-height: 320px;
+        padding: 12px;
+    }
+
+    .project-grid > .project:last-child .amazon-browser {
+        width: 100%;
+        transform: none;
+    }
+
+    .amazon-topbar {
+        font-size: 8px;
+        gap: 5px;
+        padding: 8px;
+    }
+
+    .amazon-topbar strong {
+        font-size: 12px;
+    }
+
+    .amazon-content {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 8px;
+        padding: 12px 8px;
+        min-height: 160px;
+    }
+
+    .amazon-thumbnails {
+        display: none;
+    }
+
+    .amazon-product-visual {
+        min-width: 0;
+        min-height: 140px;
+    }
+
+    .amazon-product-copy {
+        min-width: 0;
+        padding: 5px;
+    }
+
+    .amazon-product-copy h3 {
+        font-size: 13px;
+        margin: 8px 0;
+    }
+
+    .amazon-search {
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    /* SKILLS */
+    .skills-section {
+        display: flex !important;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 55px 6% !important;
+        gap: 30px !important;
+    }
+
+    .skills-heading {
+        width: 100%;
+    }
+
+    .skills-heading h2 {
+        font-size: 38px !important;
+    }
+
+    .skills-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: 100%;
+        gap: 30px 12px;
+        overflow: visible;
+    }
+
+    .skill-item {
+        min-width: 0;
+        gap: 10px;
+    }
+
+    .skill-item > img,
+    .combined-icons img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .skill-item span {
+        font-size: 11px;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .ai-toolbox {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 20px !important;
+        width: 100%;
+    }
+
+    .ai-tools {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 12px !important;
+        width: 100%;
+    }
+
+    .ai-item {
+        min-width: 0;
+        gap: 8px !important;
+    }
+
+    .ai-item span {
+        font-size: 11px !important;
+        white-space: normal !important;
+    }
+
+    /* CONTACT */
+    .contact h2 {
+        font-size: clamp(45px, 12vw, 60px);
+        letter-spacing: -2px;
+    }
+
+    .contact-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    /* FOOTER */
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+    }
+
+    footer > div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    /* REMOVE DESKTOP CURSOR ON TOUCH DEVICES */
+    .custom-cursor {
+        display: none !important;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-actions .pill {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    nav {
+        gap: 7px;
+        font-size: 9px;
+    }
+
+    .project-art {
+        height: 350px;
+    }
+}
